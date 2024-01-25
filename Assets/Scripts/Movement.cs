@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
 
     [Header("Variables")]
     [SerializeField] float movementspeed;
+    [SerializeField] float sprintmultiplier;
 
     [Header("Components")]
     [SerializeField] Camera camera;
@@ -16,8 +17,12 @@ public class Movement : MonoBehaviour
     [Header("Debug")]
     [SerializeField] Vector2 _Movement;
     [SerializeField] Vector2 _PointToward;
+    [SerializeField] float _Sprint;
 
     Rigidbody2D rb;
+
+    [SerializeField] GameObject vcam1;
+    [SerializeField] GameObject vcam2;
 
     void Awake()
     {
@@ -33,6 +38,9 @@ public class Movement : MonoBehaviour
         _playerInput.Gameplay.Movement.canceled += OnMovement;
 
         _playerInput.Gameplay.Aiming.performed += OnAim;
+
+        _playerInput.Gameplay.Sprint.performed += OnSprint;
+        _playerInput.Gameplay.Sprint.canceled += OnSprint;
     }
 
     void OnDisable()
@@ -50,13 +58,29 @@ public class Movement : MonoBehaviour
         _PointToward = camera.ScreenToWorldPoint(context.ReadValue<Vector2>());
     }
 
+    void OnSprint (InputAction.CallbackContext context)
+    {
+        _Sprint = context.ReadValue<float>();
+    }
+
     void FixedUpdate()
     {
-        rb.AddForce(transform.right * _Movement.y * movementspeed);
-        rb.AddForce(transform.up * _Movement.x * movementspeed);
+        rb.AddForce(transform.right * _Movement.y * movementspeed * (1 + _Sprint * sprintmultiplier));
+        rb.AddForce(transform.up * _Movement.x * movementspeed * (1 + _Sprint * sprintmultiplier));
 
         Vector2 facingDir = _PointToward - rb.position;
         float angle = Mathf.Atan2(facingDir.y, facingDir.x) * Mathf.Rad2Deg;
         rb.MoveRotation(angle);
+
+        if (_Movement.x > 0 || _Movement.y > 0)
+        {
+            vcam1.SetActive(true);
+            vcam2.SetActive(false);
+        }
+        else
+        {
+            vcam1.SetActive(false);
+            vcam2.SetActive(true);
+        }
     }
 }

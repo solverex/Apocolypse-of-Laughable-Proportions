@@ -16,6 +16,11 @@ public class EnemyBehaviour : MonoBehaviour
     [SerializeField] float spheresize;
     [SerializeField] LayerMask player;
 
+    bool inbound;
+
+    public bool inGass;
+    float gasdecrease;
+
 
     void OnDrawGizmosSelected()
     {
@@ -34,12 +39,30 @@ public class EnemyBehaviour : MonoBehaviour
         targetObject = GameObject.FindWithTag("player");
         Vector2 dir = targetObject.transform.position - transform.position;
 
-        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        if (inGass)
+        {
+            gasdecrease = 2f;
+        }
+        else
+        {
+            gasdecrease = 1f;
+        }
+
+        // float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        // transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
         if (!Physics2D.OverlapCircle(transform.position, spheresize, player))
         {
-            rb.AddForce(dir.normalized * objectSpeed, ForceMode2D.Force);
+            rb.AddForce((dir.normalized * objectSpeed)/ gasdecrease, ForceMode2D.Force);
+        }
+
+        if (dir.x > 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
+        else if (dir.x <= 0)
+        {
+            GetComponent<SpriteRenderer>().flipX = true;
         }
     }
 

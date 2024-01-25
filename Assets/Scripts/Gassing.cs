@@ -13,6 +13,7 @@ public class Gassing : MonoBehaviour
     public float hitrate;
 
     [Header("Components")]
+    [SerializeField] ParticleSystem GasPart;
     [SerializeField] GameObject gasObj;
 
     [Header("Debug")]
@@ -46,16 +47,19 @@ public class Gassing : MonoBehaviour
     void Update()
     {
         damagetime -= Time.deltaTime;
+
         if (gasInput > 0)
         {
-            scale += sprayspeed * Time.deltaTime;
+            scale += Time.deltaTime * sprayspeed;
+            GasPart.Play();
         }
         else
         {
-            scale += -sprayspeed * Time.deltaTime;
+            scale += Time.deltaTime * sprayspeed;
+            GasPart.Stop();
         }
 
-        scale = Mathf.Clamp(scale, 0, 1);
-        gasObj.transform.localScale = new Vector3(scale, scale, 1f);
+        scale = Mathf.Clamp(scale, 0f, 1f);
+        gasObj.transform.localScale = new Vector2(scale, scale);
     }
 }

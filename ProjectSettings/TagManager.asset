@@ -7,6 +7,11 @@ TagManager:
   - player
   - enemy
   - gas
+  - bound
+  - w1
+  - w2
+  - w3
+  - w4
   layers:
   - Default
   - TransparentFX
@@ -58,6 +63,9 @@ TagManager:
     locked: 0
   - name: BELOW
     uniqueID: 1086376055
+    locked: 0
+  - name: particles
+    uniqueID: 59166599
     locked: 0
   - name: ABOVE
     uniqueID: 2490163147

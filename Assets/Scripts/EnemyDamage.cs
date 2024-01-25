@@ -10,9 +10,13 @@ public class EnemyDamage : MonoBehaviour
     public bool inGas;
     public Gassing gasScript;
 
+    public EnemyBehaviour otherscript;
+
     float damagetime;
 
     [SerializeField] float currenthealth;
+
+    [SerializeField] GameObject hahaha;
 
     void Start()
     {
@@ -46,13 +50,19 @@ public class EnemyDamage : MonoBehaviour
     void Update()
     {
         damagetime -= Time.deltaTime;
+        otherscript.inGass = inGas;
         if (inGas)
         {
+            hahaha.SetActive(true);
             if (damagetime < 0)
             {
                 health -= gasScript.spraydamage;
                 damagetime = gasScript.hitrate;
             }
+        }
+        else
+        {
+            hahaha.SetActive(false);
         }
 
         if (health == 0)
