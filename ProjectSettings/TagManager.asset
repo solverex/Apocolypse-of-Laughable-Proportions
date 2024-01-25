@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - player
+  - enemy
+  - gas
   layers:
   - Default
   - TransparentFX
@@ -14,6 +16,7 @@ TagManager:
   - UI
   - 
   - 
+  - player
   - 
   - 
   - 
@@ -35,10 +38,27 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - nocollision
   - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BG
+    uniqueID: 3944957605
+    locked: 0
+  - name: Gas
+    uniqueID: 565239055
+    locked: 0
+  - name: ENEMY
+    uniqueID: 3842352153
+    locked: 0
+  - name: PLAYER
+    uniqueID: 891090277
+    locked: 0
+  - name: BELOW
+    uniqueID: 1086376055
+    locked: 0
+  - name: ABOVE
+    uniqueID: 2490163147
     locked: 0
