@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -32,6 +33,9 @@ public class PlayerHealth : MonoBehaviour
 
         HealthUI.transform.localScale = new Vector3(currenthealth / health, 1f, 1f);
 
-        if ()
+        if (currenthealth <= 0)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }
