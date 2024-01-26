@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class wavemanager : MonoBehaviour
 {
@@ -23,10 +25,17 @@ public class wavemanager : MonoBehaviour
     public bool WaveActive;
 
     float timer;
+    [SerializeField] AudioSource aS;
+
+    [SerializeField] TMP_Text waveTxt;
+    [SerializeField] TMP_Text secretTxt;
+
+    private float timerr;
 
     void Start()
     {
-        currentwave = 0;
+        currentwave = -1;
+        WaveActive = true;
     }
 
     void Update()
@@ -44,7 +53,12 @@ public class wavemanager : MonoBehaviour
             {
                 timer = timebetweenwaves;
 
+                aS.Play();
+
                 currentwave += 1;
+
+                waveTxt.text = "Wave " + (currentwave + 1);
+                secretTxt.text = "Aran is Comin...";
 
                 WaveActive = false;
             }
@@ -56,6 +70,8 @@ public class wavemanager : MonoBehaviour
             {
                 currentnumberofenemies = waves[currentwave].numberofbasicenemy;
                 currentspawnrate = waves[currentwave].spawnrate;
+                waveTxt.text = "";
+                secretTxt.text = "";
                 WaveActive = true;
             }
         }

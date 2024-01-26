@@ -11,12 +11,15 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] float currenthealth;
 
-    [SerializeField] GameObject HealthUI;   
+    [SerializeField] GameObject HealthUI;
+
+    [SerializeField] AudioSource aS;
 
     public void TakeDamage()
     {
         if (iframetimer < 0)
         {
+            aS.Play();
             currenthealth -= 1;
             iframetimer = Iframes;
         }

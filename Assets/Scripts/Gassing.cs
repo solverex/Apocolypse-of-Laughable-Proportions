@@ -20,6 +20,7 @@ public class Gassing : MonoBehaviour
     [SerializeField] GameObject GasCollider;
     [SerializeField] GameObject gasObj;
     [SerializeField] GameObject gasUI;
+    [SerializeField] AudioSource aS;
 
     [Header("Debug")]
     [SerializeField] float gasInput;
@@ -73,13 +74,25 @@ public class Gassing : MonoBehaviour
             gasObj.SetActive(true);
             sprayed -= spraydecreaserate * Time.deltaTime;
         }
-        else 
+        else
         {
             isSpraying = false;
             scale = 0;
             gasObj.SetActive(false);
             GasCollider.SetActive(false);
             sprayed += sprayincreaserate * Time.deltaTime;
+        }
+
+        if (isSpraying)
+        {
+            if (!aS.isPlaying)
+            {
+                aS.Play();
+            }
+        }
+        else
+        {
+            aS.Stop();
         }
 
         if (isSpraying && sprayed <= 0)
