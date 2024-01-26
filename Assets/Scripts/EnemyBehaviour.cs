@@ -21,6 +21,8 @@ public class EnemyBehaviour : MonoBehaviour
     public bool inGass;
     float gasdecrease;
 
+    PlayerHealth ph;
+
 
     void OnDrawGizmosSelected()
     {
@@ -41,7 +43,7 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (inGass)
         {
-            gasdecrease = 2f;
+            gasdecrease = 1.5f;
         }
         else
         {
@@ -68,6 +70,21 @@ public class EnemyBehaviour : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "player") Debug.Log("attacked player");
+        if (collision.gameObject.tag == "player")
+        {
+            ph = collision.gameObject.GetComponent<PlayerHealth>();
+
+            ph.TakeDamage();
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "player")
+        {
+            ph = collision.gameObject.GetComponent<PlayerHealth>();
+
+            ph.TakeDamage();
+        }
     }
 }

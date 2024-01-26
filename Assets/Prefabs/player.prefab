@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1886251184927209083}
-  m_Layer: 0
-  m_Name: laughing gas pivot
-  m_TagString: Untagged
+  - component: {fileID: 6357172365517325798}
+  m_Layer: 11
+  m_Name: laughinggas
+  m_TagString: gas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,12 +25,76 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314518802810374807}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 0, z: 0}
-  m_LocalScale: {x: 0.7140239, y: 2, z: 1}
-  m_Children:
-  - {fileID: 824832816016106187}
-  m_Father: {fileID: 2493548552063707203}
+  m_LocalPosition: {x: 2.63, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8478234808156383662}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &6357172365517325798
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314518802810374807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.01895523, y: 2.3995602}
+      - {x: -2.7816005, y: 1.6953504}
+      - {x: -2.7492745, y: -1.7959096}
+      - {x: 8.881013, y: -4.8127027}
+      - {x: 13.084437, y: -5.1403813}
+      - {x: 15.824749, y: -3.3721888}
+      - {x: 16.653217, y: 0.31727362}
+      - {x: 15.96869, y: 4.158303}
+      - {x: 11.823695, y: 5.0272703}
+--- !u!1 &2452037336130399011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8478234808156383662}
+  m_Layer: 11
+  m_Name: pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8478234808156383662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2452037336130399011}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.17, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1886251184927209083}
+  m_Father: {fileID: 2493548552063707203}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3027515064064282919
 GameObject:
@@ -41,7 +106,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2493548552063707203}
   - component: {fileID: 7954460269504226490}
-  m_Layer: 0
+  - component: {fileID: 1380709333}
+  m_Layer: 11
   m_Name: nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +125,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1886251184927209083}
+  - {fileID: 824832816016106187}
+  - {fileID: 8478234808156383662}
   m_Father: {fileID: 7006349438253244333}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -102,7 +169,7 @@ SpriteRenderer:
   m_SortingLayerID: 891090277
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf1d725bba729034f81fc758fd1d8cda, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -110,9 +177,30 @@ SpriteRenderer:
   m_Size: {x: 10, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1380709333
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027515064064282919}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 5
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7006349438253244331
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +215,7 @@ GameObject:
   - component: {fileID: 7006349438253244335}
   - component: {fileID: 7006349438253244332}
   - component: {fileID: 5262574958217362361}
-  m_Layer: 8
+  m_Layer: 11
   m_Name: player
   m_TagString: player
   m_Icon: {fileID: 0}
@@ -188,15 +276,15 @@ SpriteRenderer:
   m_SortingLayerID: 891090277
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: bf1d725bba729034f81fc758fd1d8cda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &7006349438253244334
@@ -217,7 +305,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 10, y: 12}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 10, y: 12}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -261,6 +349,8 @@ MonoBehaviour:
   movementspeed: 25
   sprintmultiplier: 2
   camera: {fileID: 0}
+  rb2: {fileID: 1380709333}
+  nose: {fileID: 0}
   _Movement: {x: 0, y: 0}
   _PointToward: {x: 0, y: 0}
   _Sprint: 0
@@ -278,14 +368,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a7278e5789e5642b2fe995d8542cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprayspeed: 10
+  sprayspeed: 0.75
   spraydamage: 1
-  hitrate: 0.35
-  GasPart: {fileID: 2575075743935512570}
-  gasObj: {fileID: 0}
+  hitrate: 1
+  spraytime: 10
+  spraydecreaserate: 1
+  sprayincreaserate: 0.5
+  GasCollider: {fileID: 2452037336130399011}
+  gasObj: {fileID: 7108543595652785917}
   gasInput: 0
   scale: 0
   damagetime: 0
+  sprayed: 0
 --- !u!1 &7108543595652785917
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +391,7 @@ GameObject:
   - component: {fileID: 824832816016106187}
   - component: {fileID: 2575075743935512570}
   - component: {fileID: 8341376196526071357}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: gas
   m_Icon: {fileID: 0}
@@ -311,11 +405,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7108543595652785917}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 3.3, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1886251184927209083}
+  m_Father: {fileID: 2493548552063707203}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!198 &2575075743935512570
@@ -334,7 +428,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
   prewarm: 0
-  playOnAwake: 0
+  playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   useRigidbodyForVelocity: 1
