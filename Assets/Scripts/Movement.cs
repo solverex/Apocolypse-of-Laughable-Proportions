@@ -13,6 +13,8 @@ public class Movement : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] Camera camera;
+    [SerializeField] Rigidbody2D rb2;
+    [SerializeField] GameObject nose;
 
     [Header("Debug")]
     [SerializeField] Vector2 _Movement;
@@ -65,12 +67,12 @@ public class Movement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(transform.right * _Movement.y * movementspeed * (1 + _Sprint * sprintmultiplier));
-        rb.AddForce(transform.up * _Movement.x * movementspeed * (1 + _Sprint * sprintmultiplier));
+        rb.AddForce(_Movement * movementspeed * (1 + _Sprint * sprintmultiplier));
+        nose.transform.position = transform.position;
 
         Vector2 facingDir = _PointToward - rb.position;
         float angle = Mathf.Atan2(facingDir.y, facingDir.x) * Mathf.Rad2Deg;
-        rb.MoveRotation(angle);
+        rb2.MoveRotation(angle);
 
         if (_Movement.x > 0 || _Movement.y > 0)
         {

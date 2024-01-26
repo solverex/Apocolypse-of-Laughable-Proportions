@@ -12,6 +12,7 @@ TagManager:
   - w2
   - w3
   - w4
+  - wall
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - player
   - 
   - 
-  - 
+  - collision
   - 
   - 
   - 

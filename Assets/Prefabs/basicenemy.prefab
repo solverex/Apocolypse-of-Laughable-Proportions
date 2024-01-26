@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1769019536}
   - component: {fileID: 1769019539}
   - component: {fileID: 1769019538}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -600,7 +600,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 100000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -865,7 +865,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 3
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4729,7 +4729,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 59166599
-  m_SortingLayer: 7
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 1965247936}
   - component: {fileID: 1965247937}
   - component: {fileID: 8862914844654407167}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: basicenemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -4854,8 +4854,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetObject: {fileID: 7006349438253244331, guid: bb811e362da0b2a48bc97e3bf6d92802,
     type: 3}
-  objectSpeed: 25
-  spheresize: 1
+  objectSpeed: 20
+  spheresize: 0
   player:
     serializedVersion: 2
     m_Bits: 256
@@ -4894,7 +4894,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1411457, y: 0.105864525}
+  m_Offset: {x: -0.1411457, y: -2.358175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4905,7 +4905,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9170113, y: 10.245039}
+  m_Size: {x: 3.9170113, y: 5.31696}
   m_EdgeRadius: 0
 --- !u!114 &8862914844654407167
 MonoBehaviour:
@@ -4927,3 +4927,7 @@ MonoBehaviour:
   otherscript: {fileID: 6979566913769815581}
   currenthealth: 0
   hahaha: {fileID: 1769019535}
+  player: {fileID: 7006349438253244331, guid: bb811e362da0b2a48bc97e3bf6d92802, type: 3}
+  Mask:
+    serializedVersion: 2
+    m_Bits: 2048

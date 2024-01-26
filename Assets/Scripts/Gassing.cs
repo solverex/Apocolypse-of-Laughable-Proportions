@@ -11,19 +11,28 @@ public class Gassing : MonoBehaviour
     [SerializeField] float sprayspeed;
     public float spraydamage;
     public float hitrate;
+    [SerializeField] float spraytime;
+    [SerializeField] float spraydecreaserate;
+    [SerializeField] float sprayincreaserate;
+    [SerializeField] float minspray;
 
     [Header("Components")]
-    [SerializeField] ParticleSystem GasPart;
+    [SerializeField] GameObject GasCollider;
     [SerializeField] GameObject gasObj;
+    [SerializeField] GameObject gasUI;
 
     [Header("Debug")]
     [SerializeField] float gasInput;
     [SerializeField] float scale;
     public float damagetime;
+    [SerializeField] float sprayed;
+    [SerializeField] bool isSpraying;
+    [SerializeField] bool canSpray;
 
     void Awake()
     {
         _playerInput = new Controls();
+        sprayed = spraytime;
     }
 
     void OnEnable()
@@ -44,22 +53,46 @@ public class Gassing : MonoBehaviour
         gasInput = context.ReadValue<float>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         damagetime -= Time.deltaTime;
 
-        if (gasInput > 0)
+        scale = Mathf.Clamp(scale, 0, 1);
+        float scalex = scale;
+        float scaley = scale;
+        GasCollider.transform.localScale = new Vector3(scalex, scaley, 1);
+        gasUI.transform.localScale = new Vector3(sprayed / spraytime, 1f, 1f);
+
+        sprayed = Mathf.Clamp(sprayed, 0, spraytime);
+
+        if (canSpray && gasInput > 0)
         {
-            scale += Time.deltaTime * sprayspeed;
-            GasPart.Play();
+            isSpraying = true;
+            scale += sprayspeed * Time.deltaTime;
+            GasCollider.SetActive(true);
+            gasObj.SetActive(true);
+            sprayed -= spraydecreaserate * Time.deltaTime;
+        }
+        else 
+        {
+            isSpraying = false;
+            scale = 0;
+            gasObj.SetActive(false);
+            GasCollider.SetActive(false);
+            sprayed += sprayincreaserate * Time.deltaTime;
+        }
+
+        if (isSpraying && sprayed <= 0)
+        {
+            canSpray = false;
+        }
+        else if (!isSpraying && sprayed < minspray)
+        {
+            canSpray = false;
         }
         else
         {
-            scale += Time.deltaTime * sprayspeed;
-            GasPart.Stop();
+            canSpray = true;
         }
-
-        scale = Mathf.Clamp(scale, 0f, 1f);
-        gasObj.transform.localScale = new Vector2(scale, scale);
     }
 }

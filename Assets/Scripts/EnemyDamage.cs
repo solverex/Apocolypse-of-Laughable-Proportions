@@ -18,6 +18,12 @@ public class EnemyDamage : MonoBehaviour
 
     [SerializeField] GameObject hahaha;
 
+    [SerializeField] GameObject player;
+
+    RaycastHit2D gasray;
+
+    [SerializeField] LayerMask Mask;
+
     void Start()
     {
         currenthealth = health;
@@ -51,13 +57,21 @@ public class EnemyDamage : MonoBehaviour
     {
         damagetime -= Time.deltaTime;
         otherscript.inGass = inGas;
+        gasray = Physics2D.Raycast(transform.position, player.transform.position - transform.position, Mask);
         if (inGas)
         {
-            hahaha.SetActive(true);
-            if (damagetime < 0)
+            if (gasray.collider.tag != "wall")
             {
-                health -= gasScript.spraydamage;
-                damagetime = gasScript.hitrate;
+                hahaha.SetActive(true);
+                if (damagetime < 0)
+                {
+                    health -= gasScript.spraydamage;
+                    damagetime = gasScript.hitrate;
+                }
+            }
+            else
+            {
+                hahaha.SetActive(false);
             }
         }
         else
