@@ -57,8 +57,11 @@ public class wavemanager : MonoBehaviour
 
                 currentwave += 1;
 
-                waveTxt.text = "Wave " + (currentwave + 1);
-                secretTxt.text = "Aran is Comin...";
+                if (currentwave != 10)
+                {
+                    waveTxt.text = "Wave " + (currentwave + 1);
+                    secretTxt.text = "Aran is Comin...";
+                }
 
                 WaveActive = false;
             }

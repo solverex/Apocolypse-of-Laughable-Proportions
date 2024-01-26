@@ -683,8 +683,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 4.55e-13, y: 44}
+  m_SizeDelta: {x: 560.1906, y: 142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339266748
 MonoBehaviour:
@@ -705,7 +705,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: WIP
+  m_text: 'Jake Dent (solverex):
+
+    Game Design, Main Programmer, Sound, UI Art
+
+
+
+    Will
+    Hards (Aqueous):
+
+    Game Design, Programmer, Menu Art
+
+
+
+    Charley Crane:
+
+    Game
+    Design, Envionment Art, Character Design'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e042c7ac7ac57794dbe9a9ec6adb68bb, type: 2}
   m_sharedMaterial: {fileID: -4733330971699120582, guid: e042c7ac7ac57794dbe9a9ec6adb68bb,
@@ -740,7 +756,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0

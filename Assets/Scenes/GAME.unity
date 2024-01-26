@@ -590,7 +590,7 @@ PrefabInstance:
     - target: {fileID: 7913994518390086576, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 29.77
+      value: 25.16
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518390086578, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
@@ -610,7 +610,7 @@ PrefabInstance:
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.size
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
@@ -625,7 +625,7 @@ PrefabInstance:
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[3].numberofbasicenemy
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
@@ -635,7 +635,7 @@ PrefabInstance:
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[4].numberofbasicenemy
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
@@ -645,52 +645,52 @@ PrefabInstance:
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[5].numberofbasicenemy
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[5].spawnrate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[6].numberofbasicenemy
-      value: 10
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[6].spawnrate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[7].numberofbasicenemy
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[7].spawnrate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[8].numberofbasicenemy
-      value: 10
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[8].spawnrate
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[9].numberofbasicenemy
-      value: 10
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[9].spawnrate
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
@@ -705,7 +705,7 @@ PrefabInstance:
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: waves.Array.data[1].spawnrate
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
@@ -722,6 +722,16 @@ PrefabInstance:
       propertyPath: secretTxt
       value: 
       objectReference: {fileID: 858962246}
+    - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
+        type: 3}
+      propertyPath: waves.Array.data[0].numberofbasicenemy
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7913994518424376234, guid: 20826f3e6f1aef0459662e100695ac49,
+        type: 3}
+      propertyPath: waves.Array.data[0].spawnrate
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7913994518424376235, guid: 20826f3e6f1aef0459662e100695ac49,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1262,7 +1272,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 739d80e2d6a44074eafa7233b5229f09, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.7
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1781,7 +1791,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6d0b9dc8d7f26d349876f4b3b3ad5cba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2138,18 +2148,23 @@ PrefabInstance:
     - target: {fileID: 5262574958217362361, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
       propertyPath: spraydecreaserate
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5262574958217362361, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
       propertyPath: sprayincreaserate
-      value: 5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5262574958217362361, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
       propertyPath: aS
       value: 
       objectReference: {fileID: 2130717833}
+    - target: {fileID: 5262574958217362361, guid: bb811e362da0b2a48bc97e3bf6d92802,
+        type: 3}
+      propertyPath: spraytime
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7006349438253244331, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
       propertyPath: m_Name
@@ -2243,12 +2258,12 @@ PrefabInstance:
     - target: {fileID: 7006349438253244334, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.19078922
+      value: -0.14315122
       objectReference: {fileID: 0}
     - target: {fileID: 7006349438253244334, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
       propertyPath: m_Size.x
-      value: 3.7297459
+      value: 2.9675407
       objectReference: {fileID: 0}
     - target: {fileID: 7006349438253244335, guid: bb811e362da0b2a48bc97e3bf6d92802,
         type: 3}
@@ -2324,8 +2339,8 @@ Canvas:
   m_GameObject: {fileID: 1205434420}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 1676423037}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2333,7 +2348,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: 169944087
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &1205434424
@@ -3372,7 +3387,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 55806ee6d786be44cb0f695fc63f4297, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
