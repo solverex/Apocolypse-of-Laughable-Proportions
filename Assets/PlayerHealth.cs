@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     [SerializeField] float currenthealth;
 
-    [SerializeField] GameObject HealthUI;
+    [SerializeField] GameObject HealthUI;   
 
     public void TakeDamage()
     {
@@ -31,5 +31,7 @@ public class PlayerHealth : MonoBehaviour
         iframetimer -= Time.deltaTime;
 
         HealthUI.transform.localScale = new Vector3(currenthealth / health, 1f, 1f);
+
+        if ()
     }
 }
